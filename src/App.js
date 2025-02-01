@@ -2,6 +2,11 @@ import Form from "./components/Form";
 import Todo from "./components/Todo";
 import FilterButton from "./components/FilterButton";
 function App(props) {
+  function addTask(name) { 
+    
+    alert(name);
+
+   }
   const nbTasks = props.tasks.length;
   let msg = "";
   if (nbTasks == 1) {
@@ -21,7 +26,7 @@ function App(props) {
   return (
     <div className="todoapp stack-large">
       <h1>TodoMatic</h1>
-      <Form />
+      <Form addTask={addTask} />
       <div className="filters btn-group stack-exception">
         <FilterButton name='Toutes' />
         <FilterButton name='Actives' />
