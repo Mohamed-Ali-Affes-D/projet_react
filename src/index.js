@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 const DATA = [
-  { id: "todo-0", name: "Manger", completed: false },
+  { id: "todo-0", name: "Manger", completed: true },
   { id: "todo-1", name: "Dormir", completed: false },
   { id: "todo-2", name: "Recommencer", completed: false },
 ];

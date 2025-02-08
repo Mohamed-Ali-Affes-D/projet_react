@@ -4,12 +4,19 @@ function Form(props) {
 
     function handleSubmit(e) {
         e.preventDefault(); // Empêcher le rechargement de la page
-        props.addTask(name);
+        if(name === "")
+        {alert("Veuillez saisir une tâche");}
+        else
+        {
+            props.addTask(name);
+            setName("");
+        }
+      
        
     }
     function handleChange(e) {
         setName(e.target.value);
-        //console.log("saisie en cours");
+        //-console.log(e.target.value);
     }
 
     return (
